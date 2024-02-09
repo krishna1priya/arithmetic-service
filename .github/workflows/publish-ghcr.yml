@@ -11,6 +11,6 @@ jobs:
             - name: Build and push the image
               run: |
                 # docker login --username ${{secrets.USERNAME_K}} --password ${{secrets.passwword}} ghcr.io
-                echo Uchiha@14 | docker login --username krishna1priya --password-stdin ghcr.io
+                echo "Uchiha@14" | docker login --username "krishna1priya" --password-stdin ghcr.io
                 docker build -t ghcr.io/krishna1priya/arithmetic-service:latest --file Dockerfile .  
                 docker push ghcr.io/krishna1priya/arithmetic-service:latest 
